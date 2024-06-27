@@ -72,6 +72,8 @@ function cursorLabel(elements: NodeListOf<HTMLElement>, cursor: HTMLElement) {
         }
     });
 
+    //ADD LABEL AND SET GSAP MOVEMENTS
+
     function setLabel() {
         label = document.createElement('span');
         label.setAttribute('data-cursor-label', '');
@@ -98,6 +100,8 @@ function cursorLabel(elements: NodeListOf<HTMLElement>, cursor: HTMLElement) {
         }
     }
 
+    //REMOVE LABEL
+
     function removeLabel() {
         label.remove();
         label = null;
@@ -105,6 +109,8 @@ function cursorLabel(elements: NodeListOf<HTMLElement>, cursor: HTMLElement) {
         rotateLabel = () => {
         };
     }
+
+    //ANIMATE LABEL MOVEMENT
 
     function moveLabel(deltaY: number) {
         if (prevMouseY !== null && label) {
@@ -115,6 +121,8 @@ function cursorLabel(elements: NodeListOf<HTMLElement>, cursor: HTMLElement) {
             rotateLabel(opposite * 2, deltaY);
         }
     }
+
+    //SET IMAGE SRC OF BACKGROUND
 
     function setLabelBg(target: Element) {
         const bg = target.getAttribute('data-thumbnail-url');
@@ -133,53 +141,4 @@ function cursorLabel(elements: NodeListOf<HTMLElement>, cursor: HTMLElement) {
             }
         }
     }
-}
-
-// export function cursorLabel(element: HTMLElement, cursor: HTMLElement) {
-//     const children = element.querySelectorAll('.vacature');
-//
-//     //SET LABEL
-//
-//     const label = document.createElement('span');
-//     label.setAttribute('data-cursor-label', '');
-//     cursor.appendChild(label);
-//
-//     //SET IMAGE
-//
-//     children.forEach((child: HTMLElement) => {
-//         const bg = child.getAttribute('data-thumbnail-url');
-//         const labelImage = document.createElement('img');
-//
-//         labelImage.src = bg;
-//         labelImage.alt = 'Vacature';
-//
-//         child.addEventListener('mouseenter', () => {
-//             label.innerHTML = '';
-//             label.appendChild(labelImage);
-//         })
-//     })
-// }
-// export function cursorLabel(element: HTMLElement, cursor: HTMLElement) {
-//     const children = element.querySelectorAll('.vacature');
-//
-//     //SET LABEL
-//
-//     const label = document.createElement('span');
-//     label.setAttribute('data-cursor-label', '');
-//     cursor.appendChild(label);
-//
-//     //SET IMAGE
-//
-//     children.forEach((child: HTMLElement) => {
-//         const bg = child.getAttribute('data-thumbnail-url');
-//         const labelImage = document.createElement('img');
-//
-//         labelImage.src = bg;
-//         labelImage.alt = 'Vacature';
-//
-//         child.addEventListener('mouseenter', () => {
-//             label.innerHTML = '';
-//             label.appendChild(labelImage);
-//         })
-//     })
-// }
+}ement) {
