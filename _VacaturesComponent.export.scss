@@ -1,0 +1,36 @@
+.VacaturesComponent {
+  @apply flex flex-col gap-[40px] w-full h-fit my-[var(--comp-spacing)];
+
+  .vacatures {
+    @apply container flex flex-col w-full text-primary;
+
+    .vacature {
+      @apply w-full p-[30px] border-b border-primary flex flex-row justify-between;
+      transition: 0.2s;
+
+      .title {
+        @apply text-[30px];
+      }
+
+      .vacature-info {
+        @apply flex flex-row w-fit gap-[30px];
+
+        .hours, .location {
+          @apply text-[16px] w-[150px] text-right flex items-center justify-end;
+        }
+      }
+
+      &:first-child {
+        @apply border-t;
+      }
+
+      &:not(.special):hover {
+        @apply bg-petrol;
+      }
+
+      &.special {
+        @apply bg-secondary;
+      }
+    }
+  }
+}
