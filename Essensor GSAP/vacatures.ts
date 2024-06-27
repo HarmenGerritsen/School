@@ -141,4 +141,4 @@ function cursorLabel(elements: NodeListOf<HTMLElement>, cursor: HTMLElement) {
             }
         }
     }
-}ement) {
+}
